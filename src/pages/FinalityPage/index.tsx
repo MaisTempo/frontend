@@ -41,12 +41,16 @@ const SelectHelp: React.FC = () => {
               <li>
                 <h1>Assistência em tempo real</h1>
                 <p>Assistência em tempo real acompanhando seu problema até a solução. Guiamos você e apresentamos os passos para solução com apenas alguns cliques.</p>
-                <Button type="button">Prosseguir</Button>
+                <Link to="">
+                  <Button type="button">Prosseguir</Button>
+                </Link>
               </li>
               <li>
                 <h1>Passo a passo</h1>
                 <p>Na sua mão os passos para solucionar seu problema. Aprenda a passar rapidamente pelo atendimento automático. Economize tempo e seja atendido com agilidade.</p>
-                <Button type="button">Prosseguir</Button>
+                <Link to="escolha/passoapasso">
+                  <Button type="button">Prosseguir</Button>
+                </Link>
               </li>
             </ul>
         </CompanyContainer>
