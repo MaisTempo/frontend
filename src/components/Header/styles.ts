@@ -8,9 +8,21 @@ export const Container = styled.div`
   justify-content: space-between;
 
   img {
-    width: 24px;
-    height: 24px;
+    width: 130px;
+    height: 130px;
+    margin-left: 60px;
   }
 `;
 
-export const SideContainer = styled.div``;
+export const SideContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 60px;
+
+  h1{
+    margin-left: 60px;
+    font-size: 20px;
+    color: #000000;
+  }
+`;
