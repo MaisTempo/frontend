@@ -13,3 +13,5 @@ const Header: React.FC = () => (
     </SideContainer>
   </Container>
 );
+
+export default Header;
