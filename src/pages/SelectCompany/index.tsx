@@ -42,7 +42,7 @@ const SelectCompany: React.FC = () => {
           </ul>
         </CompanyContainer>
         <span>Mais</span>
-        <Triangle />
+        <Triangle color={"#fff"}/>
         <FooterImage />
       </Container>
     </>
