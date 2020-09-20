@@ -33,6 +33,7 @@ const SelectHelp: React.FC = () => {
   }, []);
 
   const handleOptionClick = useCallback((id: string) => {
+    console.log(id)
     localStorage.setItem('optionId', id);
   }, []);
 
@@ -49,12 +50,12 @@ const SelectHelp: React.FC = () => {
             <ul className="items-grid">
               {options.map(option => (
                 <li key={option._id}>
-                    <Link to="/finalidades/escolha">
+                    <Link to="/finalidades/escolha"
+                            onClick={() => handleOptionClick(option._id)}>
                       <LiContent>
                         <span>{option.name}</span>
                           <RightTriangle
                             color={"FB6C02"}
-                            onClick={() => handleOptionClick(option._id)}
                           />
                       </LiContent>
                     </Link>
