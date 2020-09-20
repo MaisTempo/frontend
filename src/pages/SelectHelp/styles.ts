@@ -55,12 +55,6 @@ height: 400px;
 border-top: 3px solid #FB6C02; 
 padding-top: 20px;
 
-ul a {
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-}
-
  .items-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -78,10 +72,15 @@ ul a {
     align-items: flex-start;
     justify-content: flex-start;
     background: #f5f5f5;
-    height: 50px;
     border-radius: 16px;
     border-bottom: 3px solid #d3d3d3;
     height: 100px;
+    
+    a{
+      width: 100%;
+      height: 50%;
+      text-decoration: none;
+    }
 
     h1{
       display: flex;
@@ -115,18 +114,13 @@ ul a {
 export const LiContent = styled.div`
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   margin-top: 10px;
   margin-left: 10px;
   margin-bottom: 10px;
   width: 95%;
   height: 100px;
-  justify-content: space-between;
-
-  a{
-    width: 100%;
-    height: 100%;
-  }
-
+  
   span {
     color: #FB6C02;
   }

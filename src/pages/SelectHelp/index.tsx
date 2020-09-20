@@ -5,9 +5,10 @@ import Input from '../../components/Input';
 
 import { Container, MainContainer, CompanyContainer, LiContent, Wrapper } from './styles';
 import BottomTriangle from '../../components/BottomTriangle';
-import RightTrangle from '../../components/RightTrangle';
+import RightTriangle from '../../components/RightTrangle';
 import FooterImage from '../../components/FooterImage';
 import api from '../../services/api';
+import { Link } from 'react-router-dom';
 
 interface IOptions {
   descricao: string;
@@ -49,12 +50,12 @@ const SelectHelp: React.FC = () => {
             <ul className="items-grid">
               {options.map(option => (
                 <li key={option._id}>
-                    <LiContent>
-                      <span>{option.name}</span>
-                      {/* <Link to="/"> */}
-                        <RightTrangle color={"FB6C02"} onClick={handleOptionClick}/>
-                      {/* </Link> */}
-                    </LiContent>
+                    <Link to="/">
+                      <LiContent>
+                        <span>{option.name}</span>
+                          <RightTriangle color={"FB6C02"} onClick={handleOptionClick}/>
+                      </LiContent>
+                    </Link>
                   <h1>{option.descricao}</h1>
                 </li>
               ))}
