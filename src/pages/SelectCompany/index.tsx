@@ -7,7 +7,7 @@ import background from '../../assets/backgroundImg.svg';
 import vivo from '../../assets/vivo.png';
 
 import { Container, MainContainer, CompanyContainer, Background } from './styles';
-import Triangle from '../../components/Triangle';
+import Triangle from '../../components/BottomTriangle';
 import FooterImage from '../../components/FooterImage';
 import api from '../../services/api';
 import { Link } from 'react-router-dom';
@@ -25,14 +25,13 @@ const SelectCompany: React.FC = () => {
     async function loadCompanys() {
       const response = await api.get('/entidades');
 
-      console.log(response.data);
       setCompany(response.data);
     }
     loadCompanys();
   }, []);
 
   const handleCompanySelection = useCallback((id: string) => {
-    
+    localStorage.setItem('companyId', id);
   }, [])
 
   return (
@@ -44,16 +43,20 @@ const SelectCompany: React.FC = () => {
           <Input />
         </MainContainer>
         <CompanyContainer>
-          {companies.map(company => (
-            <Link to={`finalidades/${company._id}`}>
-              <ul key={company._id} className="items-grid">
-                <li>
-                    <img src={company.url} alt="Vivo"/>
-                    <span>{company.name}</span>
-                </li>
-              </ul>
-            </Link>
-          ))}
+            <ul className="items-grid">
+              {companies.map(company => (
+                <Link
+                  onClick={() => handleCompanySelection(company._id)}
+                  to={`finalidades`}
+                  key={company._id}
+                >
+                  <li>
+                      <img src={company.url} alt="Vivo"/>
+                      <span>{company.name}</span>
+                  </li>
+                </Link>
+              ))}
+            </ul>
         </CompanyContainer>
         <span>Mais</span>
         <Triangle color={"fff"}/>
