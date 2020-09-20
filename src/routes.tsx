@@ -7,7 +7,7 @@ import SelectHelp from './pages/SelectHelp';
 const Routes: React.FC = () => (
   <BrowserRouter>
     <Route path="/" exact component={SelectCompany}/>
-    <Route path="/finalidades/:id" component={SelectHelp}/>
+    <Route path="/finalidades" component={SelectHelp}/>
   </BrowserRouter>
 );
 
