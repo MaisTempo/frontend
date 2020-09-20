@@ -36,7 +36,7 @@ const SelectCompany: React.FC = () => {
       <Container>
         <Header />
         <MainContainer>
-          <h1>Qual a empresa a ser contatada?</h1>
+          <h1>Qual empresa a ser contatada?</h1>
           <Input />
         </MainContainer>
         <CompanyContainer>
