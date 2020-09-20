@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import { 
   Container,
@@ -10,7 +10,6 @@ import {
   SideImageContainer,
 } from './styles';
 
-import api from '../../services/api';
 import Input from '../../components/Input';
 
 import backgroundHome from '../../assets/backgroundHome.svg';
@@ -24,22 +23,6 @@ interface ISteps {
 }
 
 const Home: React.FC = () => {
-  const [steps, setSteps] = useState<ISteps[]>([]);
-  const [optionName, setOptionName] = useState('');
-
-  useEffect(() => {
-    async function loadSteps() {
-      const id = localStorage.getItem('optionId');
-      const response = await api.get(`/finalidades/id/${id}`);
-
-      console.log(response.data.fluxo);
-
-      setOptionName(response.data.name);
-      setSteps(response.data.fluxo);
-    }
-    loadSteps();
-  }, [setOptionName]);
-
   return (
     <>
       <Container>
