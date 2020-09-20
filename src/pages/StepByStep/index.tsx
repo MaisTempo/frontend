@@ -17,6 +17,7 @@ const StepByStep: React.FC = () => {
   useEffect(() => {
     async function loadSteps() {
       const id = localStorage.getItem('optionId');
+      console.log(id)
       const response = await api.get(`/finalidades/id/${id}`);
 
       console.log(response.data.fluxo);
