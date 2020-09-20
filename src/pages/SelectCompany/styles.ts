@@ -86,7 +86,7 @@ ul a {
 }
 
 .items-grid li img {
-  width: 100%;
+  width: 70%;
   height: 100px;
 }
 
