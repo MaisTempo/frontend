@@ -54,7 +54,7 @@ padding-top: 20px;
 
     @media(max-width: 800px) {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
       margin-top: 200px;
       list-style: none;
@@ -62,6 +62,8 @@ padding-top: 20px;
   }
   
   .items-grid li {
+    width: 100%;
+    height: 100%;
     background: #f5f5f5;
     border: 2px solid #f5f5f5;
     height: 180px;
