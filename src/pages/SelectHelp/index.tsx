@@ -50,12 +50,6 @@ const SelectHelp: React.FC = () => {
             <ul className="items-grid">
               {options.map(option => (
                 <li key={option._id}>
-                    <Link to="/finalidades/escolha">
-                      <LiContent
-                        onClick={() => handleOptionClick(option._id)}
-                      >
-
-                      <LiContent onClick={() => handleOptionClick(option._id)}>
                     <Link to="/finalidades/escolha"
                             onClick={() => handleOptionClick(option._id)}>
                       <LiContent>
