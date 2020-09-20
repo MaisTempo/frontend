@@ -1,14 +1,10 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Header from '../../components/Header';
-import Input from '../../components/Input';
 
 import { Container, MainContainer, CompanyContainer } from './styles';
-import Triangle from '../../components/BottomTriangle';
 import FooterImage from '../../components/FooterImage';
 import api from '../../services/api';
-import { Link } from 'react-router-dom';
-import Button from '../../components/Button';
 
 interface ISteps {
   fluxo: string[];
@@ -30,10 +26,6 @@ const StepByStep: React.FC = () => {
     }
     loadSteps();
   }, [setOptionName]);
-
-  const handleCompanySelection = useCallback((id: string) => {
-    localStorage.setItem('companyId', id);
-  }, [])
 
   return (
     <>

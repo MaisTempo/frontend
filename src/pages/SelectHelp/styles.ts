@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-interface CompanyContainerProps {
-  isFocused: boolean;
-}
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -45,7 +41,7 @@ export const MainContainer = styled.div`
   }
 `;
 
-export const CompanyContainer = styled.div<CompanyContainerProps>`
+export const CompanyContainer = styled.div`
 display: flex;
 align-items: flex-start;
 justify-content: flex-end;

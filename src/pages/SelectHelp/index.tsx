@@ -18,7 +18,6 @@ interface IOptions {
 
 const SelectHelp: React.FC = () => {
   const [options, setOptions] = useState<IOptions[]>([]);
-  const [isFocused, setIsFocused] = useState(false);
   
   useEffect(() => {
     const id = localStorage.getItem('companyId');
@@ -46,7 +45,7 @@ const SelectHelp: React.FC = () => {
             <h1>Como podemos te ajudar?</h1>
             <Input />
           </MainContainer>
-          <CompanyContainer isFocused={isFocused}>
+          <CompanyContainer>
             <ul className="items-grid">
               {options.map(option => (
                 <li key={option._id}>
