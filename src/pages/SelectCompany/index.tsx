@@ -2,9 +2,13 @@ import React from 'react';
 
 import Header from '../../components/Header';
 
+import { Container } from './styles';
+
 const SelectCompany: React.FC = () => {
   return (
-    <Header />
+    <Container>
+      <Header />
+    </Container>
   );
 }
 
