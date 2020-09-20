@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import Header from '../../components/Header';
 import Input from '../../components/Input';
@@ -9,8 +9,32 @@ import vivo from '../../assets/vivo.png';
 import { Container, MainContainer, CompanyContainer, Background } from './styles';
 import Triangle from '../../components/Triangle';
 import FooterImage from '../../components/FooterImage';
+import api from '../../services/api';
+import { Link } from 'react-router-dom';
+
+interface ICompany {
+  _id: string;
+  name: string;
+  url: string;
+}
 
 const SelectCompany: React.FC = () => {
+  const [companies, setCompany] = useState<ICompany[]>([]);
+
+  useEffect(() => {
+    async function loadCompanys() {
+      const response = await api.get('/entidades');
+
+      console.log(response.data);
+      setCompany(response.data);
+    }
+    loadCompanys();
+  }, []);
+
+  const handleCompanySelection = useCallback((id: string) => {
+    
+  }, [])
+
   return (
     <>
       <Container>
@@ -20,29 +44,19 @@ const SelectCompany: React.FC = () => {
           <Input />
         </MainContainer>
         <CompanyContainer>
-          <ul className="items-grid">
-            <li>
-                <img src={vivo} alt="Vivo"/>
-                <span>Vivo</span>
-            </li>
-            <li>
-                <img src={vivo} alt="Vivo"/>
-                <span>Vivo</span>
-            </li>
-            <li>
-                <img src={vivo} alt="Vivo"/>
-                <span>Vivo</span>
-            </li>          <li>
-                <img src={vivo} alt="Vivo"/>
-                <span>Vivo</span>
-            </li>          <li>
-                <img src={vivo} alt="Vivo"/>
-                <span>Vivo</span>
-            </li>
-          </ul>
+          {companies.map(company => (
+            <Link to={`finalidades/${company._id}`}>
+              <ul key={company._id} className="items-grid">
+                <li>
+                    <img src={company.url} alt="Vivo"/>
+                    <span>{company.name}</span>
+                </li>
+              </ul>
+            </Link>
+          ))}
         </CompanyContainer>
         <span>Mais</span>
-        <Triangle color={"#fff"}/>
+        <Triangle color={"fff"}/>
         <FooterImage />
       </Container>
     </>
