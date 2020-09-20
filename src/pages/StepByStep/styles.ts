@@ -32,13 +32,14 @@ export const MainContainer = styled.div`
   margin-top: 20px;
 
   h1 {
-    color: #000000;
+    color: #FB6C02;
   }
 `;
 
 export const CompanyContainer = styled.div`
 display: flex;
 align-items: center;
+justify-content: center;
 margin-top: 30px;
 width: 50%;
 background: 000;
@@ -53,9 +54,9 @@ ul a {
 .items-grid {
   display: grid;
   height: 100%;
-  width: 100%;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  width: 60%;
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 100px;
   list-style: none;
 
   @media(max-width: 800px) {
@@ -70,7 +71,7 @@ ul a {
 .items-grid li {
   background: #f5f5f5;
   border: 2px solid #f5f5f5;
-  height: 180px;
+  height: 400px;
   border-radius: 8px;
   padding: 32px 24px 16px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -78,11 +79,24 @@ ul a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 
   text-align: center;
 
   cursor: pointer;
+}
+
+.items-grid li h1 {
+  font-size: 25px;
+  color: #000;
+}
+
+.items-grid li p {
+  margin-top: 0;
+  text-indent: 1.5;
+  font-size: 14px;
+  color: #FB6C02;
+  text-align: center;;
 }
 
 .items-grid li img {

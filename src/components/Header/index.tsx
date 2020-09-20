@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import Logo from '../../assets/Logo_1.svg';
 import { Container, SideContainer } from './styles';

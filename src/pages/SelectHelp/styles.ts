@@ -1,13 +1,10 @@
 import styled from 'styled-components';
 
-import background from '../../assets/backgroundImg.svg';
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 100vh;
+  justify-content: center;
 
   .footerImg {
     position: absolute;
@@ -17,15 +14,23 @@ export const Container = styled.div`
     z-index: -1;
   }
 
-  span {
+  + span {
     margin-top: 50px;
     color: #fff;
   }
 `;
 
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+`;
+
 export const MainContainer = styled.div`
   display: flex;
-  width: 70%;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -38,9 +43,10 @@ export const MainContainer = styled.div`
 
 export const CompanyContainer = styled.div`
 display: flex;
-align-items: center;
+align-items: flex-start;
+justify-content: flex-end;
 margin-top: 30px;
-width: 50%;
+width: 100%;
 height: 400px;
 border-top: 3px solid #FB6C02; 
 padding-top: 20px;
@@ -56,21 +62,43 @@ padding-top: 20px;
   
   .items-grid li {
     display: flex;
-    align-items: center;
-    background: #f5f5f5;
-    height: 50px;
-    border-radius: 16px;
-    border-bottom: 3px solid #d3d3d3;
-
-    cursor: pointer;
-  }
-
-  .items-grid li span {
-    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    margin-left: 10px;
-    color: #FB6C02;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: #f5f5f5;
+    border-radius: 16px;
+    border-bottom: 3px solid #d3d3d3;
+    height: 100px;
+    
+    a{
+      width: 100%;
+      height: 50%;
+      text-decoration: none;
+    }
+
+    h1{
+      display: flex;
+      align-self: flex-start;
+      color: #FB6C02;
+      border-top: 2px solid #FB6C02;
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    h2{
+      display: flex;
+      align-self: flex-start;
+      color: #FB6C02;
+      margin-left: 10px;
+      margin-top: 60px;
+      font-size: 16px;
+    }
+
+    cursor: pointer;
   }
   
   .items-grid li.selected {
@@ -81,9 +109,16 @@ padding-top: 20px;
 
 export const LiContent = styled.div`
   display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  margin-right: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 95%;
+  height: 100px;
+  
+  span {
+    color: #FB6C02;
+  }
 `;
+
