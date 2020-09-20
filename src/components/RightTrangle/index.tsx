@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, HTMLAttributes } from 'react'
+import React, { HTMLAttributes } from 'react'
 
 import { Container } from './styles';
 

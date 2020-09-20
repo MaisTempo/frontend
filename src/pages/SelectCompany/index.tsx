@@ -2,11 +2,8 @@ import React, { useCallback, useEffect, useState } from 'react';
 
 import Header from '../../components/Header';
 import Input from '../../components/Input';
-import background from '../../assets/backgroundImg.svg';
 
-import vivo from '../../assets/vivo.png';
-
-import { Container, MainContainer, CompanyContainer, Background } from './styles';
+import { Container, MainContainer, CompanyContainer } from './styles';
 import Triangle from '../../components/BottomTriangle';
 import FooterImage from '../../components/FooterImage';
 import api from '../../services/api';

@@ -1,5 +1,4 @@
-import styled, { css } from 'styled-components';
-import { createTrue } from 'typescript';
+import styled from 'styled-components';
 
 interface CompanyContainerProps {
   isFocused: boolean;

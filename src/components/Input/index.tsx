@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { FiSearch } from 'react-icons/fi';
 import { Container } from './styles';

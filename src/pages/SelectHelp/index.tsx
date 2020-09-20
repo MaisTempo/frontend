@@ -8,7 +8,6 @@ import BottomTriangle from '../../components/BottomTriangle';
 import RightTrangle from '../../components/RightTrangle';
 import FooterImage from '../../components/FooterImage';
 import api from '../../services/api';
-import { Link } from 'react-router-dom';
 
 interface IOptions {
   descricao: string;
