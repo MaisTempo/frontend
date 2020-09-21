@@ -11,6 +11,17 @@ import Button from '../../components/Button';
 const SelectHelp: React.FC = () => {
   const [optionName, setOptionName] = useState('');
 
+  useEffect(() => {
+    const id = localStorage.getItem('optionId');
+
+    async function loadOptionName() {
+      const response = await api.get(`finalidades/id/${id}`)
+
+      setOptionName(response.data.name);
+    }
+    loadOptionName();
+  }, []);
+
   return (
     <>
       <Container>
